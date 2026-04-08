@@ -1,0 +1,51 @@
+.proj-teaser {
+  margin-top: 3rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.proj-teaser::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--purple), var(--orange));
+}
+.proj-teaser:hover {
+  border-color: rgba(59,142,255,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 30px var(--blue-glow);
+}
+.proj-teaser-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(59,142,255,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.proj-teaser-left h3 { font-family: var(--font-display); font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+.proj-teaser-left p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; max-width: 460px; }
+.proj-counter { display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.proj-count-item .count-num { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--blue); line-height: 1; }
+.proj-count-item .count-lbl { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.2rem; }
+.proj-teaser-right { display: flex; flex-direction: column; gap: 0.75rem; min-width: 180px; }
+.proj-preview-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.proj-preview-tag .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+
+@media (max-width: 960px) { .proj-teaser { flex-direction: column; } }

@@ -1,0 +1,12 @@
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  position: relative;
+  z-index: 1;
+  cursor: default;
+}
+footer span { color: var(--blue); }

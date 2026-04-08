@@ -1,0 +1,10 @@
+#grid-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+@media (max-width: 768px) { #grid-canvas { opacity: 0.18; } }
+@media (min-width: 769px) and (max-width: 1024px) { #grid-canvas { opacity: 0.28; } }
